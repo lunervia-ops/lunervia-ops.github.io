@@ -3,76 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>멋진하루의 홈페이지</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-      background: #f5f7fa;
-      color: #222;
-      line-height: 1.7;
-    }
-    header {
-      background: #2d6cdf;
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-    }
-    header h1 { margin: 0; font-size: 2.2em; }
-    header p { margin: 10px 0 0; opacity: 0.9; }
-    main {
-      max-width: 700px;
-      margin: 0 auto;
-      padding: 30px 16px;
-    }
-    section {
-      background: white;
-      border-radius: 12px;
-      padding: 20px 24px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-    h2 { color: #2d6cdf; margin-top: 0; }
-    footer {
-      text-align: center;
-      color: #888;
-      padding: 20px;
-      font-size: 0.9em;
-    }
-  </style>
+  <title>멋진하루 | 개인 홈페이지</title>
+  <meta name="description" content="하나씩 배우며 직접 만들어가는 멋진하루의 개인 홈페이지">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <header>
-    <h1>안녕하세요, 멋진하루입니다 👋</h1>
-    <p>하나씩 배우면서 직접 만들어가는 중이에요</p>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo">멋진하루<span>.</span></a>
+      <nav>
+        <a href="#about">소개</a>
+        <a href="#projects">프로젝트</a>
+        <a href="#skills">관심사</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>자기소개</h2>
-      <p>코딩은 처음이지만, 필요한 프로그램을 직접 만들어보는 걸 좋아해요.
-         이 홈페이지도 첫 도전 중 하나예요!</p>
+  <main id="top">
+    <section class="hero container">
+      <p class="eyebrow">Hello, World</p>
+      <h1>배우면서 만들고,<br>만들면서 배웁니다.</h1>
+      <p class="lead">안녕하세요, <strong>멋진하루</strong>입니다. 필요한 건 직접 만들어보는 걸 좋아해요.
+        코딩은 처음이지만 작은 프로젝트를 하나씩 완성해가고 있어요.</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
+        <a href="https://github.com/lunervia-ops" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
+      </div>
     </section>
 
-    <section>
-      <h2>진행 중인 프로젝트</h2>
-      <ul>
-        <li>재미있는 게임 놀이</li>
-        <li>주식 자동매매 연습</li>
-        <li>나만의 홈페이지 만들기 (지금 보고 계신 페이지!)</li>
-      </ul>
+    <section id="about" class="section container">
+      <h2 class="section-title"><span>01</span> 소개</h2>
+      <div class="about-grid">
+        <p>
+          저는 "있으면 좋겠다" 싶은 걸 직접 만들어보는 사람이에요.
+          게임처럼 재미있는 것부터 주식 자동매매처럼 실용적인 것까지,
+          궁금한 건 일단 손으로 해보면서 배우고 있어요.
+        </p>
+        <p>
+          이 홈페이지는 그 과정을 기록하는 공간이에요.
+          완벽하지 않아도 꾸준히 만들고, 배운 것을 하나씩 쌓아가려고 해요.
+        </p>
+      </div>
     </section>
 
-    <section>
-      <h2>연락처</h2>
-      <p>이메일: 안녕하세요</p>
+    <section id="projects" class="section container">
+      <h2 class="section-title"><span>02</span> 프로젝트</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="4"/><path d="M6 12h4M8 10v4"/><circle cx="15.5" cy="11" r="1"/><circle cx="17.5" cy="13" r="1"/></svg>
+          </div>
+          <h3>재미있는 게임 놀이</h3>
+          <p>간단한 게임을 직접 만들어보며 프로그래밍의 기본기를 익히고 있어요.</p>
+          <ul class="tags"><li>게임</li><li>기초 코딩</li></ul>
+          <span class="status doing">진행 중</span>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg>
+          </div>
+          <h3>주식 자동매매 연습</h3>
+          <p>데이터를 보고 규칙에 따라 자동으로 매매하는 프로그램을 연습하고 있어요.</p>
+          <ul class="tags"><li>자동화</li><li>데이터</li></ul>
+          <span class="status doing">진행 중</span>
+        </article>
+        <article class="card">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><circle cx="6" cy="6.5" r=".6"/><circle cx="8.5" cy="6.5" r=".6"/></svg>
+          </div>
+          <h3>나만의 홈페이지</h3>
+          <p>지금 보고 계신 이 페이지예요. GitHub Pages로 직접 만들어 올렸어요.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>GitHub</li></ul>
+          <span class="status done">공개 완료</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section container">
+      <h2 class="section-title"><span>03</span> 관심사 &amp; 배우는 중</h2>
+      <div class="skills">
+        <div class="skill-group">
+          <h3>배우는 중</h3>
+          <ul class="chips">
+            <li>HTML / CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Git &amp; GitHub</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>관심 있는 것</h3>
+          <ul class="chips">
+            <li>AI 도구 활용</li>
+            <li>업무 자동화</li>
+            <li>게임 개발</li>
+            <li>투자 데이터 분석</li>
+          </ul>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    © 2026 멋진하루
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year">2026</span> 멋진하루</p>
+      <a href="https://github.com/lunervia-ops" target="_blank" rel="noopener">github.com/lunervia-ops</a>
+    </div>
   </footer>
 
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }
+    }), { threshold: 0.12 });
+    document.querySelectorAll('.section, .card').forEach(el => { el.classList.add('fade'); io.observe(el); });
+  </script>
 </body>
 </html>
